@@ -5,7 +5,7 @@
     state: absent
 # Apply new config
 - template:
-    src: etc/ansible/roles/wp/templates/default.j2
+    src: /etc/ansible/roles/wp/templates/default.j2
     dest: /etc/nginx/sites-available/default
     owner: root
     group: root
