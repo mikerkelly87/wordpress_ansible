@@ -1,0 +1,7 @@
+---
+# Install the apt packages
+- apt:
+    name: '{{ item }}'
+    state: latest
+    force: yes
+  with_items: '{{ packages }}'

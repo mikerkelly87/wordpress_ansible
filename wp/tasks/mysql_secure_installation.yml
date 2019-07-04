@@ -1,0 +1,54 @@
+---
+- mysql_user:
+    user: root
+    password: "{{ mysql_root_password }}"
+    host: localhost
+    # Ignore Errors on this one in case the playbook is run a 2nd time
+  ignore_errors: yes
+
+- mysql_user:
+    user: ""
+    host: "{{ ansible_fqdn }}"
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- mysql_user:
+    user: ""
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- mysql_user:
+    user: root
+    password: "{{ mysql_root_password }}"
+    host: ::1
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- mysql_user:
+    user: root
+    password: "{{ mysql_root_password }}"
+    host: 127.0.0.1
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- mysql_user:
+    user: root
+    password: "{{ mysql_root_password }}"
+    host: localhost
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- mysql_user:
+    user: root
+    password: "{{ mysql_root_password }}"
+    host: "{{ ansible_fqdn }}"
+    login_user: root
+    login_password: "{{ mysql_root_password }}"
+
+- mysql_db:
+    db: test
+    state: absent
+    login_user: root
+    login_password: "{{ mysql_root_password }}"

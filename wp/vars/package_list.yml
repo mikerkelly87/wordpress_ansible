@@ -1,0 +1,11 @@
+---
+# List of Packages to be Installed
+packages:
+  - git-core
+  - mysql-server
+  - mysql-client
+  - libmysqlclient-dev
+  - python-mysqldb
+  - nginx
+  - php-fpm
+  - php-mysql

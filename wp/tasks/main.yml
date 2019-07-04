@@ -1,2 +1,7 @@
 ---
-# tasks file for wp
+# tasks file for the wp role
+- name: Install the required packages
+  include_tasks: install_packages.yml
+- name: Run mysql_secure_installation
+  include_tasks: mysql_secure_installation.yml
+  
