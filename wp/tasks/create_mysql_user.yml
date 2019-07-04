@@ -20,7 +20,7 @@
 # Create Wordpress user and allow connection from localhost
 - mysql_user:
     user: root
-    password: "{{ mysql_romysql_wordpress_userot_password }}"
+    password: "{{ mysql_wordpress_user }}"
     host: localhost
     priv: 'wp.*:ALL,GRANT'
     state: present
