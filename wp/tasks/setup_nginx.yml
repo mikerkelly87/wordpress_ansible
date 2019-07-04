@@ -1,0 +1,30 @@
+---
+# Remove existing file
+- file:
+    src: /etc/nginx/sites-available/default
+    state: absent
+# Apply new config
+- template:
+    src: etc/ansible/roles/wp/templates/default.j2
+    dest: /etc/nginx/sites-available/default
+    owner: root
+    group: root
+    mode: 0644
+# Recreate the symlink
+- file:
+    src: /etc/nginx/sites-available/default
+    dest: /etc/nginx/sites-enabled/default
+    state: link
+# Restart Nginx so the new config takes effect
+- service:
+    name: nginx
+    state: restarted
+# Throw in a phpinfo page to make sure php-fpm is working
+- lineinfile:
+    path: /var/www/html/info.php
+    line: '{{ item }}'
+    state: present
+    create: yes
+  with_items:
+    - "<?php"
+    - "phpinfo();"

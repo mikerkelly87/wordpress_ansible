@@ -4,4 +4,5 @@
   include_tasks: install_packages.yml
 - name: Run mysql_secure_installation
   include_tasks: mysql_secure_installation.yml
-  
+- name: Setup Nginx
+  include_tasks: setup_nginx.yml
