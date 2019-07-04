@@ -1,7 +1,7 @@
 ---
 # Remove existing file
 - file:
-    src: /etc/nginx/sites-available/default
+    path: /etc/nginx/sites-available/default
     state: absent
 # Apply new config
 - template:
