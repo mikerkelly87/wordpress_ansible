@@ -6,3 +6,7 @@
   include_tasks: mysql_secure_installation.yml
 - name: Setup Nginx
   include_tasks: setup_nginx.yml
+- name: Create the MySQL Database for Wordpress
+  include_tasks: create_wordpress_db.yml
+- name: Create the MySQL user for Wordpress
+  include_tasks: create_mysql_user.yml
