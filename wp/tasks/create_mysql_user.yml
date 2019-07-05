@@ -10,7 +10,7 @@
     login_password: "{{ mysql_root_password }}"
 # Create Wordpress user and allow connection from localhost
 - mysql_user:
-    user: root
+    user: wordpress
     password: "{{ mysql_wordpress_user }}"
     host: 127.0.0.1
     priv: 'wp.*:ALL,GRANT'
@@ -19,7 +19,7 @@
     login_password: "{{ mysql_root_password }}"
 # Create Wordpress user and allow connection from localhost
 - mysql_user:
-    user: root
+    user: wordpress
     password: "{{ mysql_wordpress_user }}"
     host: localhost
     priv: 'wp.*:ALL,GRANT'
@@ -28,7 +28,7 @@
     login_password: "{{ mysql_root_password }}"
 # Create Wordpress user and allow connection from localhost
 - mysql_user:
-    user: root
+    user: wordpress
     password: "{{ mysql_wordpress_user }}"
     host: "{{ ansible_fqdn }}"
     priv: 'wp.*:ALL,GRANT'
