@@ -13,3 +13,7 @@
 - file:
     state: absent
     path:  /tmp/wordpress/
+# Apply wp-config.php
+- template:
+    src: /etc/ansible/roles/wp/templates/wp-config.j2
+    dest: /var/www/html/wp-config.php

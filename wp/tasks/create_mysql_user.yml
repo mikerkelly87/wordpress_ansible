@@ -1,37 +1,37 @@
 ---
 # Create Wordpress user and allow connection from localhost
 - mysql_user:
-    user: wordpress
-    password: "{{ mysql_wordpress_user }}"
+    user: "{{ mysql_wordpress_user }}"
+    password: "{{ mysql_wordpress_password }}"
     host: ::1
-    priv: 'wp.*:ALL,GRANT'
+    priv: ''{{wordpress_db}}'.*:ALL,GRANT'
     state: present
     login_user: root
     login_password: "{{ mysql_root_password }}"
 # Create Wordpress user and allow connection from localhost
 - mysql_user:
-    user: wordpress
-    password: "{{ mysql_wordpress_user }}"
+    user: "{{ mysql_wordpress_user }}"
+    password: "{{ mysql_wordpress_password }}"
     host: 127.0.0.1
-    priv: 'wp.*:ALL,GRANT'
+    priv: ''{{wordpress_db}}'.*:ALL,GRANT'
     state: present
     login_user: root
     login_password: "{{ mysql_root_password }}"
 # Create Wordpress user and allow connection from localhost
 - mysql_user:
-    user: wordpress
-    password: "{{ mysql_wordpress_user }}"
+    user: "{{ mysql_wordpress_user }}"
+    password: "{{ mysql_wordpress_password }}"
     host: localhost
-    priv: 'wp.*:ALL,GRANT'
+    priv: ''{{wordpress_db}}'.*:ALL,GRANT'
     state: present
     login_user: root
     login_password: "{{ mysql_root_password }}"
 # Create Wordpress user and allow connection from localhost
 - mysql_user:
-    user: wordpress
-    password: "{{ mysql_wordpress_user }}"
+    user: "{{ mysql_wordpress_user }}"
+    password: "{{ mysql_wordpress_password }}"
     host: "{{ ansible_fqdn }}"
-    priv: 'wp.*:ALL,GRANT'
+    priv: ''{{wordpress_db}}'.*:ALL,GRANT'
     state: present
     login_user: root
     login_password: "{{ mysql_root_password }}"

@@ -1,4 +1,6 @@
 ---
 mysql_root_password: changepass123
 mysql_deploy_password: changepass123
-mysql_wordpress_user: changepass123
+mysql_wordpress_user: wordpress
+mysql_wordpress_password: changepass123
+wordpress_db: wp
