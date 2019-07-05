@@ -11,4 +11,4 @@
 - name: Create the MySQL user for Wordpress
   include_tasks: create_mysql_user.yml
 - name: Install Wordpress
-  unclude_tasks: install_wordpress.yml
+  include_tasks: install_wordpress.yml
