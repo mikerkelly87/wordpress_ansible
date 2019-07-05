@@ -1,7 +1,9 @@
 ---
 # Remove test database
 - mysql_db:
-    db: test
-    state: absent
+    db: wp
+    state: present
     login_user: root
     login_password: "{{ mysql_root_password }}"
+
+    
