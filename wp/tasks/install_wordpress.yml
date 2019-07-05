@@ -3,7 +3,7 @@
 # Download the Wordpress tarball and extract it to /tmp
 - unarchive:
     src: https://wordpress.org/latest.tar.gz
-    dest: /var/tmp/
+    dest: /tmp/
     remote_src: yes
 # Move all the files from /tmp/wordpress/* to /var/www/html/
 - copy:
