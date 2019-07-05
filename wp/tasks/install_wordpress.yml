@@ -1,0 +1,6 @@
+---
+# Install Wordpress tasks
+- unarchive:
+    src: https://wordpress.org/latest.tar.gz
+    dest: /var/www/html/
+    remote_src: yes
