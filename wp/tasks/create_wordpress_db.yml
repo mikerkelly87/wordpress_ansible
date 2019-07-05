@@ -1,5 +1,5 @@
 ---
-# Remove test database
+# Create Wordpress database
 - mysql_db:
     db: "{{ wordpress_db }}"
     state: present
